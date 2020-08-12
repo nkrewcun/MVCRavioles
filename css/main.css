@@ -13,3 +13,26 @@
 .jumbotron p {
     font-size: 1.25rem;
 }
+
+table img {
+    height: 100px;
+    width: auto;
+}
+
+.card {
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+}
+
+.card img {
+    object-fit: cover;
+    height: 500px;
+}
+
+.actionButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

@@ -9,7 +9,7 @@ include_once 'parts/head.php';
 
     <div class="container">
         <h2>Ajouter une recette : </h2>
-        <a href="index.php" class="btn btn-secondary">Revenir en arrière</a>
+        <a href="index.php" class="btn btn-secondary">Retour</a>
         <form method="post" action="index.php?controller=raviole&action=insert" enctype="multipart/form-data">
             <div class="form-group">
                 <div class="form-group">

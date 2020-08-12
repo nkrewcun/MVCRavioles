@@ -1,7 +1,7 @@
-<table class="table">
-    <thead>
+<table class="table table-striped">
+    <thead class="thead-dark">
     <tr>
-        <th>@Id</th>
+        <th>Image</th>
         <th>Ingredient principal</th>
         <th>Titre</th>
         <th>Actions</th>
@@ -17,7 +17,7 @@
     foreach ($ravioles as $raviole) {
         ?>
         <tr>
-            <td><?php echo $raviole->getId(); ?></td>
+            <td><?php echo $raviole->getFile() ? '<img src="assets/uploads/images/' . $raviole->getFile() .'" alt="' . $raviole->getTitre() . '">' : 'Pas d\'image' ?></td>
             <td><?php echo $raviole->getIngredientPrincipal(); ?></td>
             <td><?php echo $raviole->getTitre(); ?></td>
             <td>
