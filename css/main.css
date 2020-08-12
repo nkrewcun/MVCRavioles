@@ -1,0 +1,15 @@
+.jumbotron {
+    background-image: url("../assets/ravioles.jpg");
+    background-size: cover;
+}
+
+.jumbotron .container {
+    max-width: 960px;
+    background-color: rgba(0,0,0, 0.4);
+    border : white 1px solid;
+    padding: 1rem;
+}
+
+.jumbotron p {
+    font-size: 1.25rem;
+}
