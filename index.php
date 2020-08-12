@@ -9,11 +9,11 @@ if (empty($_GET)) {
     if ($_GET['action'] === 'get' && isset($_GET['id'])) {
         $ravioleController->get($_GET['id']);
     } else if ($_GET['action'] === 'add') {
-        $ravioleController->add();
+        $ravioleController->displayAddForm();
     } else if ($_GET['action'] === 'insert') {
         $ravioleController->insert();
     } else if ($_GET['action'] === 'edit' && isset($_GET['id'])) {
-        $ravioleController->edit($_GET['id']);
+        $ravioleController->displayEditForm($_GET['id']);
     } else if ($_GET['action'] === 'update' && isset($_GET['id'])) {
         $ravioleController->update($_GET['id']);
     } else if ($_GET['action'] === 'delete' && isset($_GET['id'])) {

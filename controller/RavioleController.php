@@ -28,7 +28,7 @@ class RavioleController
         require 'view/raviole_view.php';
     }
 
-    public function add()
+    public function displayAddForm()
     {
         require 'view/add_raviole.php';
     }
@@ -49,7 +49,7 @@ class RavioleController
         }
     }
 
-    public function edit($id)
+    public function displayEditForm($id)
     {
         $raviole = $this->ravioleManager->select($id);
 
@@ -123,14 +123,12 @@ class RavioleController
         return $error;
     }
 
-    private function uploadImage($image, $residentFile)
+    private function uploadImage($image, $ravioleFile)
     {
-        if ($residentFile) {
-            move_uploaded_file($image['tmp_name'], 'assets/uploads/images/' . $residentFile);
-        } else {
-            $residentFile = uniqid() . '.' . pathinfo($image['name'])['extension'];
-            move_uploaded_file($image['tmp_name'], 'assets/uploads/images/' . $residentFile);
+        if (!$ravioleFile) {
+            $ravioleFile = uniqid() . '.' . pathinfo($image['name'])['extension'];
         }
-        return $residentFile;
+        move_uploaded_file($image['tmp_name'], 'assets/uploads/images/' . $ravioleFile);
+        return $ravioleFile;
     }
 }
